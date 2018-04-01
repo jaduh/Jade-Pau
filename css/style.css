@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+img {
+  width: 30vw;
+  height: auto; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+h2 {
+  font-size: 3rem;
+  margin: 1.5rem; }
+
+h3 {
+  font-size: 2.5rem;
+  margin: 1.5rem; }
+
+p {
+  text-align: justify;
+  font-size: 2rem; }
+
+section {
+  width: 100vw; }
+
+header {
+  background-color: #fff;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between; }
+  header img {
+    width: auto;
+    height: 40%;
+    margin: 5rem 2rem; }
+  header nav {
+    align-self: flex-end;
+    margin-bottom: 1rem; }
+    header nav a {
+      color: #0082c3;
+      font-family: roboto, sans-serif;
+      font-size: 1rem;
+      text-decoration: none;
+      margin-right: 3rem; }
+      @media (min-width: 600px) {
+        header nav a {
+          font-size: 2rem; } }
+
+/* section 1 */
+.section-een {
+  min-height: 100vh;
+  background-color: #f1eeee;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .section-een .foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .section-een .foto-container img {
+      width: auto;
+      height: auto;
+      max-width: 90vw; }
+    .section-een .foto-container p {
+      margin: 3rem 0; }
+
+/* section 2 */
+.section-twee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0; }
+  .section-twee img {
+    height: auto;
+    width: 90vw; }
+  .section-twee h3 {
+    width: 45vw;
+    margin: 2rem; }
+  .section-twee .geel-tekstvlak {
+    background-color: #ffea28;
+    width: 90vw;
+    padding: 1rem; }
+    .section-twee .geel-tekstvlak p {
+      margin: 2rem;
+      width: 90vw; }
+  .section-twee button {
+    color: #fff;
+    background-color: #0082c3;
+    width: 90vw;
+    height: 3rem;
+    font-size: 2rem;
+    margin-top: .5rem; }
+
+/* section 3 */
+.section-drie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../img/bgimage.jpg);
+  background-size: cover;
+  background-position: top center; }
+
+form {
+  max-width: 80vw; }
+  form .invoer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 70vw;
+    margin-top: 1rem;
+    font-size: 1.8rem; }
+    form .invoer input {
+      background-color: #ffea28;
+      border: 0;
+      outline: none;
+      width: 50vw;
+      height: 3rem; }
+    form .invoer label {
+      margin: .5rem; }
+    form .invoer .button {
+      max-width: 6rem;
+      margin: 1rem;
+      background-color: #0082c3;
+      color: #fff; }
+
+@media (min-width: 600px) {
+  a {
+    font-size: 2rem; }
+  .section-een {
+    min-height: auto; }
+    .section-een .afbeelding-container {
+      display: flex;
+      justify-content: center;
+      width: 100vw; }
+      .section-een .afbeelding-container img {
+        max-width: 45vw; }
+      .section-een .afbeelding-container #heren {
+        margin-right: 1.5rem; }
+      .section-een .afbeelding-container #dames {
+        margin-left: 1.5rem; }
+      .section-een .afbeelding-container p {
+        max-width: 45vw; }
+  .section-drie .mid {
+    max-width: 15vw; }
+  .section-drie .kort {
+    max-width: 10vw; }
+  .section-drie .button {
+    min-width: 15vw;
+    font-size: 1.5rem;
+    position: relative;
+    left: 9.2rem; } }
+
+@media (min-width: 750px) {
+  .section-twee {
+    padding: 2rem 0;
+    flex-direction: row;
+    justify-content: center; }
+    .section-twee img {
+      height: auto;
+      min-width: 30vw;
+      max-width: 45vw;
+      margin: 1rem; }
+    .section-twee p {
+      font-size: 2rem;
+      max-width: 45vw;
+      margin: .05rem 2rem;
+      padding: 0 1rem;
+      text-overflow: hidden; }
+  button {
+    grid-column-start: 2;
+    grid-row: 2;
+    min-width: 40vw;
+    max-width: 45vw;
+    margin: 0 2rem;
+    margin-top: 1rem; } }

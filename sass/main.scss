@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
+
+
+//--------  colors
+$bgcolor-1:#fff;
+$bgcolor-2:#f1eeee;
+$bgcolor-3: #ffea28;
+$textcolor-1:#0082c3;
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 30vw;
+    height: auto;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+h2{
+    font-size: 3rem;
+    margin: 1.5rem;
+}
+h3{
+    font-size: 2.5rem;
+    margin: 1.5rem;
+}
+p{
+    text-align: justify;
+    font-size: 2rem;
+}
+section{
+    width:100vw;
+
+}
+
+
+//  ------------   header
+header{
+    background-color:$bgcolor-1;
+    height:15vh;
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: auto;
+        height: 40%;
+        margin: 5rem 2rem;
+    }
+    nav{
+        align-self: flex-end;
+        margin-bottom: 1rem;
+
+        a{
+            color: $textcolor-1;
+            font-family: roboto, sans-serif;
+            font-size: 1rem;
+            text-decoration: none;
+            margin-right: 3rem;
+            @media  (min-width: 600px){
+                 font-size: 2rem;
+            }
+            
+              
+        }
+    }
+}
+
+
+
+
+/* section 1 */
+
+.section-een{
+    min-height: 100vh;
+    background-color:$bgcolor-2;
+    padding: 2rem;
+    @include flex-column();
+
+    .foto-container{
+        @include flex-column();
+
+        img{
+            width: auto;
+            height: auto;
+            max-width:90vw;
+        }
+        p{
+            margin: 3rem 0;
+        }
+    }
+   
+}
+
+
+
+
+
+/* section 2 */
+.section-twee{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:2rem 0;
+    img{
+   
+        height: auto;
+        width:90vw;
+    }
+    h3{
+        width: 45vw;
+        margin:2rem;
+    }
+    .geel-tekstvlak{
+        background-color: $bgcolor-3;
+        width: 90vw;
+        padding: 1rem;
+       
+        p{
+            margin:2rem;
+            width:90vw;
+           
+        }
+        
+    }
+    button {
+        color:$bgcolor-1;
+        background-color: $textcolor-1;
+        width: 90vw;
+        height: 3rem;
+        font-size: 2rem;
+        margin-top:.5rem;
+        
+    }
+}
+
+
+
+
+
+/* section 3 */
+
+.section-drie{
+    @include flex-column();
+    background:linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255,255, .8)), url(../img/bgimage.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+form{
+    max-width:80vw;
+    .invoer{
+        display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width:70vw;
+      margin-top:1rem;
+      font-size:1.8rem;
+      
+      input{
+        background-color:$bgcolor-3;
+        border:0;
+        outline: none;
+        width:50vw;
+        height: 3rem;
+            
+        }
+        label{
+            margin: .5rem;
+            
+         
+        }
+        .button{
+            max-width:6rem;
+            margin: 1rem;
+            background-color:$textcolor-1;
+            color:$bgcolor-1;
+        }
+    }
+    
+    
+    
+}
+
+
+
+
+
+@media  (min-width: 600px){
+
+   a{
+       font-size: 2rem;
+    }
+    .section-een{
+        min-height: auto;
+
+        .afbeelding-container{
+            display:flex;
+            justify-content:center;
+            width: 100vw;
+            img{
+                max-width: 45vw;
+            }
+            #heren{
+                margin-right: 1.5rem;
+            }
+            #dames{
+                margin-left: 1.5rem;
+            }
+            p{
+                max-width: 45vw;
+                
+             }
+        }
+    }    
+    .section-drie{
+        .mid{max-width:15vw;
+            }
+        .kort{
+                max-width: 10vw;
+            }
+        .button{
+                min-width:15vw;
+                font-size: 1.5rem;
+                position: relative;
+                left:9.2rem;
+        }
+    }
+      
+}
+
+@media (min-width:750px){
+    .section-twee{
+       
+        padding: 2rem 0;
+        flex-direction: row;
+        justify-content: center;
+        img{
+            height: auto;
+            min-width:30vw;
+            max-width: 45vw;
+            margin:1rem;   
+        }
+        p{
+            font-size:2rem;
+            max-width:45vw;
+            margin: .05rem 2rem;
+            padding:0 1rem;
+            text-overflow: hidden;
+        }
+    }
+   
+  
+   
+    button{
+        grid-column-start:2;
+        grid-row: 2;
+        min-width: 40vw;
+        max-width: 45vw;
+        margin:0 2rem;
+        margin-top: 1rem;
+    }
+   
+
+}
